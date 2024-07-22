@@ -12,6 +12,16 @@ function App() {
             </div>
         );
     }
+
+    const Jobs = (props)=>{
+        return(
+          <div>
+              <h1>{props.salary}</h1>
+              <h2>{props.position}</h2>
+              <h3>{props.company}</h3>
+          </div>
+        );
+    }
     //Module 8 : API
     const [todo, setTodo] = useState("");
     const fetchTodoData = () => {
@@ -38,7 +48,7 @@ function App() {
     // }
     return (
         <div className="App">
-
+            <Jobs salary={9} position={"Tester"} company="Tesla"/>
             {/*Module 2: Component and props*/}
             <User name="Phap" age={39} />
             {/*Module 8: API*/}
