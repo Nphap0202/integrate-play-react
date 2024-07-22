@@ -3,6 +3,16 @@ import Axios from "axios";
 import {useEffect, useState} from "react";
 
 function App() {
+    //Module 1: Component and props
+    const User =(props)=>{
+        return(
+            <div>
+                <h1>{props.name}</h1>
+                <h2>{props.age}</h2>
+            </div>
+        );
+    }
+    //Module 8 : API
     const [todo, setTodo] = useState("");
     const fetchTodoData = () => {
         Axios.get("http://localhost:9000/todo/1").then((res) => {
@@ -28,6 +38,10 @@ function App() {
     // }
     return (
         <div className="App">
+
+            {/*Module 2: Component and props*/}
+            <User name="Phap" age={39} />
+            {/*Module 8: API*/}
             <p>{todo}</p>
             {/*<User/>*/}
         </div>
